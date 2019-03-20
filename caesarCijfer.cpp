@@ -17,7 +17,7 @@ int main(int argc, char *argv[]){
         rotaties = std::stoi(argv[1]);
     }
     catch (const std::invalid_argument& ia){
-        std::cerr << "Ongeldige argumenten: " << ia.what() << endl;
+        std::cerr << "Het argument " << arguments << " is geen geldig argument.\nEen geldig argument bestaat uit een positief of een negatief getal.\nFunctie: " << ia.what() << endl;
         return 0;
     }
 
