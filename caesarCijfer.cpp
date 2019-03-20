@@ -21,7 +21,7 @@ int main(int argc, char *argv[]){
         return 0;
     }
 
-    rotaties = (rotaties + 26) % 26;
+    rotaties = ((rotaties % 26) + 26) % 26;
 
     string input;
     string output;
