@@ -17,7 +17,7 @@ int main(int argc, char *argv[]){
         rotaties = std::stoi(argv[1]);
     }
     catch (const std::invalid_argument& ia){
-        std::cerr << "Het argument " << arguments << " is geen geldig argument.\nEen geldig argument bestaat uit een positief of een negatief getal.\nFunctie: " << ia.what() << endl;
+        //std::cerr << "Het argument " << arguments << " is geen geldig argument.\nEen geldig argument bestaat uit een positief of een negatief getal.\nFunctie: " << ia.what() << endl;
         return 0;
     }
 
@@ -26,8 +26,7 @@ int main(int argc, char *argv[]){
     string input;
     string output;
 
-    cout << "Enter hier uw invoer, druk op CTRL+D om te beëindigen: " << endl;
-    while(cout << '>' && getline(cin, input)){
+    while(getline(cin, input)){
         if (input[0] == 0x04){
             break;
         }
@@ -55,7 +54,7 @@ int main(int argc, char *argv[]){
         }
         output += '\n';
     }
-    cout << endl << "Uitvoer met rotatiecijfer " << arguments << ":" << endl;
+    
     cout << output;
     return 0;
 }
